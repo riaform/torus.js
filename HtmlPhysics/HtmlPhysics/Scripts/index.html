@@ -1,0 +1,36 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Box2DJS - Physics Engine for JavaScript</title>
+    <!--=============================-->
+    <!-- Copy this part to your app. -->
+    <!-- START                       -->
+    <!--=============================-->
+    <!-- libs -->
+    <script src='jquery-1.4.1.js'></script>
+    <script src='Box2dWeb-2.1.a.3.js'></script>
+    <script src='demos/demos.js'></script>
+    <script type="text/javascript">
+        window.onload = setup;
+        $("#error").html("Loading....");
+        </script>
+</head>
+<body>
+    <div>
+        <p id="error">
+            Init</p>
+    </div>
+    <div class="MIDDLE">
+        <canvas width="900" height="700" id="canvas"></canvas>
+    </div>
+    <div style="height:700;position:absolute;top:0; left: 900px;">
+        <table>
+        <tr><td><p>Force-Multiplier</p></td><td><input type="text" id="forceMultiplier" value="8000" /> </td></tr>
+        <tr><td><p>Length</p></td><td><input type="text" id="length" value="30" /></td></tr>
+        <tr><td><p>Charge Mass</p></td><td><input type="text" id="chargeMass" value="0" /></td></tr>
+        <tr><td><input type="button" value="Reset" onclick="reset_click()" /></td></tr>
+        </table>
+    </div>
+</body>
+</html>
