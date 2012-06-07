@@ -63,6 +63,7 @@
       this.beforeRemoveTargetElement = function(elem, index, item) {
         return self.beforeRemoveTarget(elem, index, item);
       };
+      this.topOffset = $("body").offset();
     }
 
     MultiSelectViewModel.prototype.beforeRemoveSource = function(removedElement, index, item) {
@@ -78,9 +79,9 @@
       $(removedElement).css("position", "absolute").css("left", pos.left).css("top", pos.top);
       $(this.container).append($(removedElement));
       return $(removedElement).animate({
-        left: targetPos.left,
-        top: targetPos.top
-      }, 900, "easeOutElastic", function() {
+        left: targetPos.left - this.topOffset.left,
+        top: targetPos.top - this.topOffset.top
+      }, 500, "easeOutCubic", function() {
         $(removedElement).remove();
         return $(addedElement).css("visibility", "visible");
       });
@@ -100,9 +101,9 @@
       $(sourceElement).css("visibility", "hidden");
       addedElement = sourceElement;
       return $(floatingItem).animate({
-        left: pos.left,
-        top: pos.top
-      }, 700, "easeOutElastic", function() {
+        left: pos.left - this.topOffset.left,
+        top: pos.top - this.topOffset.top
+      }, 500, "easeOutCubic", function() {
         $(floatingItem).remove();
         return $(addedElement).css("visibility", "visible");
       });
