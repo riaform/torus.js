@@ -1,0 +1,33 @@
+.panel {
+    width: 250px;
+    background-color: #e0e0e0;
+    display: inline-block;
+    border: 2px solid blue;
+    margin: 5px;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    cursor:default;            
+}
+
+.source { width: 250px; float: right}
+
+.item {
+    padding: 5pt;
+    height: 30pt;
+    margin: 5pt;
+    background-color: #9090ff;
+    border: 2px solid black;
+    display: inline-block;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    cursor:pointer;
+}
+
