@@ -6,8 +6,20 @@
 
     MultiSelectViewModel.name = 'MultiSelectViewModel';
 
+    MultiSelectViewModel.prototype.any = function(obj, iterator) {
+      var o, _i, _len;
+      for (_i = 0, _len = obj.length; _i < _len; _i++) {
+        o = obj[_i];
+        if (iterator(o)) {
+          return true;
+        }
+      }
+      return false;
+    };
+
     function MultiSelectViewModel(selection, data, keyfn, container) {
-      var o, obj, self, _i, _len;
+      var d, obj, self, _i, _len,
+        _this = this;
       this.selection = selection;
       this.keyfn = keyfn;
       this.container = container;
@@ -34,20 +46,12 @@
         };
       }
       this.source = ko.observableArray([]);
+      d = [];
       for (_i = 0, _len = data.length; _i < _len; _i++) {
         obj = data[_i];
-        if (((function() {
-          var _j, _len1, _ref, _results;
-          _ref = this.selection;
-          _results = [];
-          for (_j = 0, _len1 = _ref.length; _j < _len1; _j++) {
-            o = _ref[_j];
-            if (this.keyfn(o) === this.keyfn(obj)) {
-              _results.push(o);
-            }
-          }
-          return _results;
-        }).call(this)).length === 0) {
+        if (!this.any(this.selection(), function(i) {
+          return _this.keyfn(i) === _this.keyfn(obj);
+        })) {
           this.source.push(obj);
         }
       }

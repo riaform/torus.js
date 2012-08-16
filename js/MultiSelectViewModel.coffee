@@ -16,6 +16,12 @@ class MultiSelectViewModel
     #        * element is animated to target
     #        * On animation complete, floating element is destroyed and added element is shown (display:show)
 
+    any: (obj, iterator) ->
+        for o in obj 
+            if iterator(o) then return true
+        return false
+
+
     # take two arrays, the selection and the choice from the selection
     # data is the source of the array, all possible values
     # keyfn is the function returning the identity of the object
@@ -24,7 +30,9 @@ class MultiSelectViewModel
         @keyfn ?= (obj) -> JSON.stringify(obj)        # use JSON stringify if no key function
         #  @selection = ko.observableArray(@selection) if not typeof @selection=="function"
         @source = ko.observableArray([])                                # set-up source array, items not in selection
-        @source.push obj for obj in data when (o for o in @selection when @keyfn(o)==@keyfn(obj)).length==0
+        d = []
+        # push to a source collection only if there are not ANY occurences in the selection, use the keyfn for identity
+        @source.push obj for obj in data when !@any(@selection(),(i)=> @keyfn(i)==@keyfn(obj))
         @targetLocations = []
         @addedElements = []
         self = @        # have to provide local functions because of problems with overriding the context from the binding
