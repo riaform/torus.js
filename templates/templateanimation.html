@@ -1,0 +1,24 @@
+﻿<!-- template to use to visualize the item - just use a span -->
+<script type="text/html" id="itemTemplate">
+    <div class="item" data-bind="click: function() { if ($parent.selection.indexOf($data)>=0) $parent.selection.remove($data); else { $parent.selection.push($data); } }">
+        <span data-bind="text: name"></span>
+    </div>
+</script>
+<div>
+    <p>Two DIV areas (one source and one target) populated using a knockout foreach with a template based on an observable array.  Clicking
+        on an element adds it to the target observable array.  Clicking it again removes it from the collection.
+    </p>
+    <div id="container">
+        <div class="panel source" data-bind="with:people">
+            <p>Target Array</p>
+            <div data-bind="template: { name: 'itemTemplate', foreach: selection, afterAdd: afterAddTargetElement, beforeRemove: beforeRemoveTargetElement }">
+            </div>
+        </div>
+        <div class="panel target" data-bind="with:people">
+            <p>Source Array (populated using objects rendered with 'itemTemplate')</p>
+            <div data-bind="template: { name: 'itemTemplate', foreach: source, beforeRemove: beforeRemoveSourceElement, afterAdd: afterAddSourceElement}">
+            </div>
+        </div>
+        <div id="log"></div>
+    </div>
+</div>

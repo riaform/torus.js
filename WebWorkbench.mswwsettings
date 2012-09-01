@@ -1,1 +1,51 @@
-<web-workbench />
+﻿<?xml version="1.0" encoding="utf-8"?>
+<web-workbench>
+  <file name="animation-layouts.coffee">
+    <setting name="Compile">True</setting>
+    <setting name="Minify">False</setting>
+    <setting name="OutputFolder"></setting>
+    <setting name="Bare">False</setting>
+    <setting name="Iced">False</setting>
+    <setting name="IncludedFiles"></setting>
+  </file>
+  <file name="base64.coffee">
+    <setting name="Compile">True</setting>
+    <setting name="Minify">False</setting>
+    <setting name="OutputFolder"></setting>
+    <setting name="Bare">False</setting>
+    <setting name="Iced">False</setting>
+    <setting name="IncludedFiles"></setting>
+  </file>
+  <file name="multi-select.coffee">
+    <setting name="Compile">True</setting>
+    <setting name="Minify">False</setting>
+    <setting name="OutputFolder"></setting>
+    <setting name="Bare">False</setting>
+    <setting name="Iced">False</setting>
+    <setting name="IncludedFiles"></setting>
+  </file>
+  <file name="switchview.coffee">
+    <setting name="Compile">True</setting>
+    <setting name="Minify">False</setting>
+    <setting name="OutputFolder"></setting>
+    <setting name="Bare">False</setting>
+    <setting name="Iced">False</setting>
+    <setting name="IncludedFiles"></setting>
+  </file>
+  <file name="external-ko-template.coffee">
+    <setting name="Compile">True</setting>
+    <setting name="Minify">False</setting>
+    <setting name="OutputFolder"></setting>
+    <setting name="Bare">False</setting>
+    <setting name="Iced">False</setting>
+    <setting name="IncludedFiles"></setting>
+  </file>
+  <file name="main.coffee">
+    <setting name="Compile">True</setting>
+    <setting name="Minify">False</setting>
+    <setting name="OutputFolder" />
+    <setting name="Bare">False</setting>
+    <setting name="Iced">False</setting>
+    <setting name="IncludedFiles"></setting>
+  </file>
+</web-workbench>
