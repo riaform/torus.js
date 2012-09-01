@@ -4,6 +4,9 @@
 *.suo
 *.user
 *.sln.docstates
+packages/
+**/packages/
+
 
 # Build results
 **/[Dd]ebug/
@@ -28,7 +31,6 @@
 **/*.dotCover
 
 ## TODO: If you have NuGet Package Restore enabled, uncomment this
-packages/ 
 
 # Visual C++ cache files
 ipch/
