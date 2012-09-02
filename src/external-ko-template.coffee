@@ -1,6 +1,5 @@
 define ["jquery","knockout"],($,ko) ->
     class ExternalTemplateSource
-
         constructor: (templateName) ->
             @templateName = templateName;
             @loaded = false
@@ -9,22 +8,22 @@ define ["jquery","knockout"],($,ko) ->
             @currentTmpl.data = {}
 
         data: (key, value) =>
-            if (arguments.length == 1) then return this.currentTmpl.data[key]
-            this.currentTmpl.data[key] = value;
+            if (arguments.length == 1) then return currentTmpl.data[key]
+            @currentTmpl.data[key] = value;
         # read/write the actual template text
         
         text: (value) =>
-            if (!this.loaded) then this.getTemplate()
-            if (arguments.length == 0) then return this.currentTmpl()
-            this.currentTmpl(arguments[0])
+            if (!@loaded) then @getTemplate()
+            if (arguments.length == 0) then return @currentTmpl()
+            @currentTmpl(arguments[0])
     
         getUrl: () =>
-            ExternalTemplateSource.urlPrefix + this.templateName + ExternalTemplateSource.urlPostfix
+            ExternalTemplateSource.urlPrefix + @templateName + ExternalTemplateSource.urlPostfix
 
         # retrieve our actual template via AJAX
         getTemplate: () =>
-            if (!this.loading && !this.loaded) 
-                this.loading = true;
+            if (!@loading && !@loaded) 
+                @loading = true
                 $.ajax
                     url: @getUrl(),
                     context: this,
@@ -36,7 +35,7 @@ define ["jquery","knockout"],($,ko) ->
                     error: (data) =>
                         this.loaded = true
                         this.loading = false
-                        @currentTmpl(ExternalTemplateSource.errorTemplate + " " + this.getUrl() + " " + JSON.stringify(data));
+                        @currentTmpl(ExternalTemplateSource.errorTemplate + " " + @getUrl() + " " + JSON.stringify(data));
                     dataType: 'html'
 
     # Static loading/error templates for easy, albeit global customization
@@ -52,13 +51,13 @@ define ["jquery","knockout"],($,ko) ->
     ExternalTemplateEngine = new ko.nativeTemplateEngine()
     ExternalTemplateEngine.cachedSources = {}
 
-    ExternalTemplateEngine.makeTemplateSource = (templateName) =>
+    ExternalTemplateEngine.makeTemplateSource = (templateName) ->
         if (typeof templateName == "string") 
-            if (this.cachedSources[templateName] == undefined) 
-                this.cachedSources[templateName] = new ExternalTemplateSource(templateName)
-            return this.cachedSources[templateName]
+            if (@cachedSources[templateName] == undefined) 
+                @cachedSources[templateName] = new ExternalTemplateSource(templateName)
+            return ExternalTemplateEngine.cachedSources[templateName]
         new ko.templateSources.anonymousTemplate(templateName) # Anonymous template
     
     # Expose the source and engine publically
     ko.templateSources.externalHTML = ExternalTemplateSource;
-    ko.setTemplateEngine(ExternalTemplateEngine);
+    ko.setTemplateEngine(ExternalTemplateEngine)

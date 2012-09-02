@@ -1,7 +1,7 @@
 (function() {
   var __bind = function(fn, me){ return function(){ return fn.apply(me, arguments); }; };
 
-  define(["jquery", "knockout"], function($, ko) {
+  define(["jquery", "knockout", "jquery.easing"], function($, ko) {
     var MultiSelectViewModel;
     return MultiSelectViewModel = (function() {
 

@@ -2,8 +2,7 @@
   var __bind = function(fn, me){ return function(){ return fn.apply(me, arguments); }; };
 
   define(["jquery", "knockout"], function($, ko) {
-    var ExternalTemplateEngine, ExternalTemplateSource,
-      _this = this;
+    var ExternalTemplateEngine, ExternalTemplateSource;
     ExternalTemplateSource = (function() {
 
       function ExternalTemplateSource(templateName) {
@@ -23,7 +22,7 @@
 
       ExternalTemplateSource.prototype.data = function(key, value) {
         if (arguments.length === 1) {
-          return this.currentTmpl.data[key];
+          return currentTmpl.data[key];
         }
         return this.currentTmpl.data[key] = value;
       };
@@ -76,10 +75,10 @@
     ExternalTemplateEngine.cachedSources = {};
     ExternalTemplateEngine.makeTemplateSource = function(templateName) {
       if (typeof templateName === "string") {
-        if (_this.cachedSources[templateName] === void 0) {
-          _this.cachedSources[templateName] = new ExternalTemplateSource(templateName);
+        if (this.cachedSources[templateName] === void 0) {
+          this.cachedSources[templateName] = new ExternalTemplateSource(templateName);
         }
-        return _this.cachedSources[templateName];
+        return ExternalTemplateEngine.cachedSources[templateName];
       }
       return new ko.templateSources.anonymousTemplate(templateName);
     };

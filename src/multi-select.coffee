@@ -1,5 +1,5 @@
 ﻿# A class to handle multi-selection bindings 
-define ["jquery","knockout"],($,ko) ->
+define ["jquery","knockout","jquery.easing"],($,ko) ->
     class MultiSelectViewModel
 
         # The design of this small ViewModel class is to support animating between a source

@@ -1,10 +1,10 @@
 (function() {
 
-  define(["multi-select", "knockout"], function(ms, ko) {
-    var AnimateLayoutViewModel;
-    return AnimateLayoutViewModel = (function() {
+  define(["/src/multi-select.js", "knockout"], function(MultiSelectViewModel, ko) {
+    var AnimateLayoutDemoViewModel;
+    return AnimateLayoutDemoViewModel = (function() {
 
-      function AnimateLayoutViewModel() {
+      function AnimateLayoutDemoViewModel() {
         this.target = ko.observableArray([
           {
             name: 'Two'
@@ -42,7 +42,7 @@
         });
       }
 
-      return AnimateLayoutViewModel;
+      return AnimateLayoutDemoViewModel;
 
     })();
   });

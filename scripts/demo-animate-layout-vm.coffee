@@ -1,5 +1,5 @@
-define ["multi-select","knockout"], (ms,ko) ->
-    class AnimateLayoutViewModel
+define ["/src/multi-select.js","knockout"], (MultiSelectViewModel,ko) ->
+    class AnimateLayoutDemoViewModel
         constructor: () ->
             @target = ko.observableArray([{ name: 'Two' }])
             @source = [
@@ -21,4 +21,4 @@ define ["multi-select","knockout"], (ms,ko) ->
             #   Source Array
             #   Identity function to test equality of the objects
             #   Container Selector for common parent
-            @people = new MultiSelectViewModel this.target, this.source, (obj) -> obj.name
+            @people = new MultiSelectViewModel @target, @source, (obj) -> obj.name

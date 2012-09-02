@@ -1,0 +1,18 @@
+﻿<div class="demo" >
+    <p>
+        Two DIV areas (one source and one target) populated using a knockout foreach with a template based on an observable array.  Clicking
+        on an element adds it to the target observable array.  Clicking it again removes it from the collection.
+    </p>
+    <div id="container">
+        <div class="panel source" data-bind="with:people">
+            <p>Target Array</p>
+            <div data-bind="template: { name: 'animation-item', foreach: selection, afterAdd: afterAddTargetElement, beforeRemove: beforeRemoveTargetElement }">
+            </div>
+        </div>
+        <div class="panel target" data-bind="with:people">
+            <p>Source Array (populated using objects rendered with 'itemTemplate')</p>
+            <div data-bind="template: { name: 'animation-item', foreach: source, beforeRemove: beforeRemoveSourceElement, afterAdd: afterAddSourceElement}">
+            </div>
+        </div>
+    </div>
+</div>

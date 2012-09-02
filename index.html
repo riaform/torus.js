@@ -2,14 +2,23 @@
 <html en>
 <head>
     <title>torus.js samples</title>
-    <script data-main="js/main" src="scripts/require.js"></script>
+    <link href="css/site.css" rel="stylesheet" />
+    <script data-main="scripts/main" src="scripts/require.js"></script>
 </head>
 <body>
     <h2>torus.js</h2>
-    <ol>
-        <li data-bind="click:showLayoutAnimation"><a href="templateanimation.html">Example</a> showing Knockout.js based template layout 2 layout animation</li>
-        <li><a href=""</li>
-        <li>Coming Soon. Example showing physics engine graph layout</li>
-    </ol>
+    <div id="main"></div>
+    <div class="tile" data-bind="click:showAnimateLayout">
+        Example showing Knockout.js based template layout 2 layout animation
+    </div>
+    <div class="tile" data-bind="click:showBase64">
+        Example showing Base64
+    </div>
+    <div data-bind="with:animateLayout">
+        <div data-bind="template:{ name:'layout-animation-demo',data:$data}"></div>
+    </div>
+    <div data-bind="with:base64">
+        <div data-bind="template:{ name:'base64-demo', data: $data }"></div>
+    </div>
 </body>
 </html>

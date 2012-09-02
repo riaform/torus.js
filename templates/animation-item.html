@@ -1,0 +1,4 @@
+﻿<!-- template to use to visualize the item - just use a span -->
+<div class="item" data-bind="click: function() { if ($parent.selection.indexOf($data)>=0) $parent.selection.remove($data); else { $parent.selection.push($data); } }">
+    <span data-bind="text: name"></span>
+</div>
