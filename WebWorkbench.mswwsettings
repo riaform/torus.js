@@ -51,7 +51,7 @@
   <file name="demo-animate-layout-vm.coffee">
     <setting name="Compile">True</setting>
     <setting name="Minify">False</setting>
-    <setting name="OutputFolder" />
+    <setting name="OutputFolder"></setting>
     <setting name="Bare">False</setting>
     <setting name="Iced">False</setting>
     <setting name="IncludedFiles"></setting>
@@ -59,7 +59,7 @@
   <file name="demo-base64-vm.coffee">
     <setting name="Compile">True</setting>
     <setting name="Minify">False</setting>
-    <setting name="OutputFolder" />
+    <setting name="OutputFolder"></setting>
     <setting name="Bare">False</setting>
     <setting name="Iced">False</setting>
     <setting name="IncludedFiles"></setting>
@@ -67,12 +67,20 @@
   <file name="demo-viewmodel.coffee">
     <setting name="Compile">True</setting>
     <setting name="Minify">False</setting>
-    <setting name="OutputFolder" />
+    <setting name="OutputFolder"></setting>
     <setting name="Bare">False</setting>
     <setting name="Iced">False</setting>
     <setting name="IncludedFiles"></setting>
   </file>
   <file name="switch-view.coffee">
+    <setting name="Compile">True</setting>
+    <setting name="Minify">False</setting>
+    <setting name="OutputFolder"></setting>
+    <setting name="Bare">False</setting>
+    <setting name="Iced">False</setting>
+    <setting name="IncludedFiles"></setting>
+  </file>
+  <file name="logger.coffee">
     <setting name="Compile">True</setting>
     <setting name="Minify">False</setting>
     <setting name="OutputFolder" />

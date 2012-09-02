@@ -33,18 +33,23 @@
 
 .tile {
     width:150px;
-    height:150px;
+    height:100px;
     background-color:#ffd800;
     text-align:center;
     display:inline-block;
     margin:10px;
-    vertical-align:central; 
+    cursor:pointer;
+    user-select:none;
+    padding:5pt;
+    vertical-align:top;
+    font-family:Arial;
+    font-weight:500;
 }
 
 .demo {
-display:block;
-border:double 5px black;
-padding:5px;
-min-height:300px;
-min-width:300px;
+    display:block;
+    border:double 5px black;
+    padding:5px;
+    min-height:300px;
+    min-width:300px;
 }
