@@ -12,7 +12,7 @@
     }
   });
 
-  require(["jquery", "knockout", "demo-viewmodel", "src/switch-view.js", "src/external-ko-template.js"], function($, ko, ViewModel, SwitchView) {
+  require(["jquery", "knockout", "demo-viewmodel", "src/switch-view", "src/external-ko-template"], function($, ko, ViewModel, SwitchView) {
     return $(function() {
       $.ajaxSetup({
         cache: false
