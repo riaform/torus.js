@@ -83,7 +83,8 @@
       return new ko.templateSources.anonymousTemplate(templateName);
     };
     ko.templateSources.externalHTML = ExternalTemplateSource;
-    return ko.setTemplateEngine(ExternalTemplateEngine);
+    ko.setTemplateEngine(ExternalTemplateEngine);
+    return ExternalTemplateSource;
   });
 
 }).call(this);

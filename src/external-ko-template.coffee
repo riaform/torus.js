@@ -61,3 +61,4 @@ define ["jquery","knockout"],($,ko) ->
     # Expose the source and engine publically
     ko.templateSources.externalHTML = ExternalTemplateSource;
     ko.setTemplateEngine(ExternalTemplateEngine)
+    ExternalTemplateSource
