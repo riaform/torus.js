@@ -4,15 +4,16 @@
 
   require.config({
     baseUrl: '/torus.js/scripts',
+    urlArgs: "bust=" + (new Date()).getTime(),
     paths: {
       "jquery": "jquery-1.8.0",
       "knockout": "knockout-2.1.0",
       "jquery.easing": "jquery.easing.1.3",
-      "src": "/torus.js/src"
+      "source": "/torus.js/src"
     }
   });
 
-  require(["jquery", "knockout", "demo-viewmodel", "src/switch-view", "src/external-ko-template"], function($, ko, ViewModel, SwitchView) {
+  require(["jquery", "knockout", "demo-viewmodel", "source/switch-view", "source/external-ko-template"], function($, ko, ViewModel, SwitchView) {
     return $(function() {
       $.ajaxSetup({
         cache: false

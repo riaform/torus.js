@@ -1,7 +1,7 @@
 (function() {
   var __bind = function(fn, me){ return function(){ return fn.apply(me, arguments); }; };
 
-  define(["src/base64", "knockout"], function(Base64, ko) {
+  define(["source/base64", "knockout"], function(Base64, ko) {
     var Base64DemoViewModel;
     return Base64DemoViewModel = (function() {
 

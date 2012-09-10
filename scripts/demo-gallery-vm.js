@@ -1,6 +1,6 @@
 (function() {
 
-  define(["knockout", "src/ko-binding-nivo-slider"], function(ko) {
+  define(["knockout", "source/ko-binding-nivo-slider"], function(ko) {
     var GalleryViewModel;
     return GalleryViewModel = (function() {
 
