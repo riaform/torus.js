@@ -14,8 +14,10 @@
   });
 
   require(["jquery", "knockout", "demo-viewmodel", "source/switch-view", "source/external-ko-template"], function($, ko, ViewModel, SwitchView, ExternalTemplateSource) {
+    var ets;
+    ets = ExternalTemplateSource;
     return $(function() {
-      ExternalTemplateSource.urlPrefix = "/torus.js/templates/";
+      ets.urlPrefix = "/torus.js/templates/";
       $.ajaxSetup({
         cache: false
       });
