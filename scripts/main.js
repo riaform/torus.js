@@ -4,6 +4,7 @@
 
   require.config({
     baseUrl: '/torus.js/scripts',
+    enforceDefine: true,
     paths: {
       "jquery": "jquery-1.8.0",
       "knockout": "knockout-2.1.0",
