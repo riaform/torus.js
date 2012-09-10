@@ -5,7 +5,7 @@
     return GalleryViewModel = (function() {
 
       function GalleryViewModel() {
-        this.urls = ko.observableArray(["content/one.jpg", "content/two.jpg", "content/three.jpg"]);
+        this.urls = ko.observableArray(["Content/one.jpg", "Content/two.jpg", "Content/three.jpg"]);
       }
 
       return GalleryViewModel;
