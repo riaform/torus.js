@@ -1,0 +1,131 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<web-workbench>
+  <file name="animation-layouts.coffee">
+    <setting name="Compile">True</setting>
+    <setting name="Minify">False</setting>
+    <setting name="OutputFolder"></setting>
+    <setting name="Bare">False</setting>
+    <setting name="Iced">False</setting>
+    <setting name="IncludedFiles"></setting>
+  </file>
+  <file name="base64.coffee">
+    <setting name="Compile">True</setting>
+    <setting name="Minify">False</setting>
+    <setting name="OutputFolder"></setting>
+    <setting name="Bare">False</setting>
+    <setting name="Iced">False</setting>
+    <setting name="IncludedFiles"></setting>
+  </file>
+  <file name="multi-select.coffee">
+    <setting name="Compile">True</setting>
+    <setting name="Minify">False</setting>
+    <setting name="OutputFolder"></setting>
+    <setting name="Bare">False</setting>
+    <setting name="Iced">False</setting>
+    <setting name="IncludedFiles"></setting>
+  </file>
+  <file name="switchview.coffee">
+    <setting name="Compile">True</setting>
+    <setting name="Minify">False</setting>
+    <setting name="OutputFolder"></setting>
+    <setting name="Bare">False</setting>
+    <setting name="Iced">False</setting>
+    <setting name="IncludedFiles"></setting>
+  </file>
+  <file name="external-ko-template.coffee">
+    <setting name="Compile">True</setting>
+    <setting name="Minify">False</setting>
+    <setting name="OutputFolder"></setting>
+    <setting name="Bare">False</setting>
+    <setting name="Iced">False</setting>
+    <setting name="IncludedFiles"></setting>
+  </file>
+  <file name="main.coffee">
+    <setting name="Compile">True</setting>
+    <setting name="Minify">False</setting>
+    <setting name="OutputFolder"></setting>
+    <setting name="Bare">False</setting>
+    <setting name="Iced">False</setting>
+    <setting name="IncludedFiles"></setting>
+  </file>
+  <file name="demo-animate-layout-vm.coffee">
+    <setting name="Compile">True</setting>
+    <setting name="Minify">False</setting>
+    <setting name="OutputFolder"></setting>
+    <setting name="Bare">False</setting>
+    <setting name="Iced">False</setting>
+    <setting name="IncludedFiles"></setting>
+  </file>
+  <file name="demo-base64-vm.coffee">
+    <setting name="Compile">True</setting>
+    <setting name="Minify">False</setting>
+    <setting name="OutputFolder"></setting>
+    <setting name="Bare">False</setting>
+    <setting name="Iced">False</setting>
+    <setting name="IncludedFiles"></setting>
+  </file>
+  <file name="demo-viewmodel.coffee">
+    <setting name="Compile">True</setting>
+    <setting name="Minify">False</setting>
+    <setting name="OutputFolder"></setting>
+    <setting name="Bare">False</setting>
+    <setting name="Iced">False</setting>
+    <setting name="IncludedFiles"></setting>
+  </file>
+  <file name="switch-view.coffee">
+    <setting name="Compile">True</setting>
+    <setting name="Minify">False</setting>
+    <setting name="OutputFolder"></setting>
+    <setting name="Bare">False</setting>
+    <setting name="Iced">False</setting>
+    <setting name="IncludedFiles"></setting>
+  </file>
+  <file name="logger.coffee">
+    <setting name="Compile">True</setting>
+    <setting name="Minify">False</setting>
+    <setting name="OutputFolder"></setting>
+    <setting name="Bare">False</setting>
+    <setting name="Iced">False</setting>
+    <setting name="IncludedFiles"></setting>
+  </file>
+  <file name="CoffeeScript1.coffee">
+    <setting name="Compile">True</setting>
+    <setting name="Minify">False</setting>
+    <setting name="OutputFolder" />
+    <setting name="Bare">False</setting>
+    <setting name="Iced">False</setting>
+    <setting name="IncludedFiles"></setting>
+  </file>
+  <file name="ko-binding-date-picker.coffee">
+    <setting name="Compile">True</setting>
+    <setting name="Minify">False</setting>
+    <setting name="OutputFolder"></setting>
+    <setting name="Bare">False</setting>
+    <setting name="Iced">False</setting>
+    <setting name="IncludedFiles"></setting>
+  </file>
+  <file name="ko-binding-image-upload.coffee">
+    <setting name="Compile">True</setting>
+    <setting name="Minify">False</setting>
+    <setting name="OutputFolder"></setting>
+    <setting name="Bare">False</setting>
+    <setting name="Iced">False</setting>
+    <setting name="IncludedFiles"></setting>
+  </file>
+  <file name="ko-binding-nivo-slider.coffee">
+    <setting name="Compile">True</setting>
+    <setting name="Minify">False</setting>
+    <setting name="OutputFolder"></setting>
+    <setting name="Bare">False</setting>
+    <setting name="Iced">False</setting>
+    <setting name="IncludedFiles"></setting>
+  </file>
+  <file name="demo-gallery-vm.coffee">
+    <setting name="Compile">True</setting>
+    <setting name="Minify">False</setting>
+    <setting name="OutputFolder" />
+    <setting name="Bare">False</setting>
+    <setting name="Iced">False</setting>
+    <setting name="IncludedFiles"></setting>
+  </file>
+</web-workbench>

@@ -1,0 +1,20 @@
+﻿<!-- template to use to visualize the item - just use a span -->
+<div class="demo" >
+    <div class="slider-wrapper" >
+        <div class="list frontSlide nivoSlider" data-bind="foreach: urls, nivoSlider: { effect:'slideInLeft', controlNav:false, directionNav:false }">
+            <img data-bind="attr: { src: $data }" />
+        </div>
+    </div>
+    <div>
+        <p>Use the Kockout custom binding <b>nivoSlider</b> in conjunction with a foreach loop over images.  All properties in the binding are passed into nivo control as settings.</p>
+        <code>
+            <pre>
+    &lt;div class="list frontSlide nivoSlider" data-bind="foreach: urls, <b>nivoSlider: { effect:'slideInLeft', controlNav:false, directionNav:false }</b>"&gt;
+        &lt;img data-bind="attr: { src: $data }" /&gt;
+    &lt;/div&gt;
+            </pre>
+        </code>
+
+    </div>
+
+</div>
