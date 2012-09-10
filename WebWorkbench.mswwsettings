@@ -99,7 +99,7 @@
   <file name="ko-binding-date-picker.coffee">
     <setting name="Compile">True</setting>
     <setting name="Minify">False</setting>
-    <setting name="OutputFolder" />
+    <setting name="OutputFolder"></setting>
     <setting name="Bare">False</setting>
     <setting name="Iced">False</setting>
     <setting name="IncludedFiles"></setting>
@@ -107,12 +107,20 @@
   <file name="ko-binding-image-upload.coffee">
     <setting name="Compile">True</setting>
     <setting name="Minify">False</setting>
-    <setting name="OutputFolder" />
+    <setting name="OutputFolder"></setting>
     <setting name="Bare">False</setting>
     <setting name="Iced">False</setting>
     <setting name="IncludedFiles"></setting>
   </file>
   <file name="ko-binding-nivo-slider.coffee">
+    <setting name="Compile">True</setting>
+    <setting name="Minify">False</setting>
+    <setting name="OutputFolder"></setting>
+    <setting name="Bare">False</setting>
+    <setting name="Iced">False</setting>
+    <setting name="IncludedFiles"></setting>
+  </file>
+  <file name="demo-gallery-vm.coffee">
     <setting name="Compile">True</setting>
     <setting name="Minify">False</setting>
     <setting name="OutputFolder" />

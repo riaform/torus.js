@@ -3,7 +3,7 @@
     __hasProp = {}.hasOwnProperty,
     __extends = function(child, parent) { for (var key in parent) { if (__hasProp.call(parent, key)) child[key] = parent[key]; } function ctor() { this.constructor = child; } ctor.prototype = parent.prototype; child.prototype = new ctor(); child.__super__ = parent.prototype; return child; };
 
-  define(["/src/switch-view.js", "demo-animate-layout-vm", "demo-base64-vm", "demo-gallery-vm"], function(SwitchView, AnimateLayoutViewModel, Base64DemoViewModel, GalleryViewModel) {
+  define(["../src/switch-view.js", "demo-animate-layout-vm", "demo-base64-vm", "demo-gallery-vm"], function(SwitchView, AnimateLayoutViewModel, Base64DemoViewModel, GalleryViewModel) {
     var DemoViewModel;
     return DemoViewModel = (function(_super) {
 
