@@ -7,8 +7,10 @@ require.config
         "knockout": "knockout-2.1.0",
         "jquery.easing" : "jquery.easing.1.3",
         "source" : "/torus.js/src"
-require ["jquery","knockout", "demo-viewmodel", "source/switch-view", "source/external-ko-template"], ($,ko,ViewModel,SwitchView) ->
+require ["jquery","knockout", "demo-viewmodel", "source/switch-view", "source/external-ko-template"], ($,ko,ViewModel,SwitchView,ExternalTemplateSource) ->
     $( () ->
+        # switch to local template directory (just GH branch)
+        ExternalTemplateSource.urlPrefix = "/torus.js/templates/"
         $.ajaxSetup({ cache: false })
         $("#main").text("KO: " + typeof(ViewModel))
         ko.applyBindings(new ViewModel())

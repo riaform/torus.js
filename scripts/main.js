@@ -13,8 +13,9 @@
     }
   });
 
-  require(["jquery", "knockout", "demo-viewmodel", "source/switch-view", "source/external-ko-template"], function($, ko, ViewModel, SwitchView) {
+  require(["jquery", "knockout", "demo-viewmodel", "source/switch-view", "source/external-ko-template"], function($, ko, ViewModel, SwitchView, ExternalTemplateSource) {
     return $(function() {
+      ExternalTemplateSource.urlPrefix = "/torus.js/templates/";
       $.ajaxSetup({
         cache: false
       });
