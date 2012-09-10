@@ -1,0 +1,8 @@
+﻿<!-- template to use to visualize the item - just use a span -->
+<div class="demo" >
+    <div class="slider-wrapper" >
+        <div class="list frontSlide nivoSlider" data-bind="foreach: urls, nivoSlider: { effect:'slideInLeft', controlNav:false, directionNav:false }">
+            <img data-bind="attr: { src: $data }" />
+        </div>
+    </div>
+</div>

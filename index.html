@@ -3,19 +3,46 @@
 <head>
     <title>torus.js samples</title>
     <link href="css/site.css" rel="stylesheet" />
+    <link href="scripts/nivo-slider/themes/default/default.css" rel="stylesheet" />
+    <link href="scripts/nivo-slider/nivo-slider.css" rel="stylesheet" />
+    <style type="text/css">
+        .nivoSlider img {
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            display: none;
+            height: 300px;
+            width:300px;
+        }
+        .nivoSlider {
+            height: 300px;
+            width: 300px;
+        }
+        /*.nivo-box img {
+            display: block;
+            height: 300px;
+            width:300px;
+        }*/
+    </style>
     <script data-main="scripts/main" src="scripts/require.js"></script>
 </head>
 <body>
     <h2>torus.js</h2>
-    <div class="tile" data-bind="click:showAnimateLayout">Example showing <b>Knockout.js</b> based template layout 2 layout animation
+    <div class="tile" data-bind="click:showAnimateLayout">
+        Example showing <b>Knockout.js</b> based template layout 2 layout animation
     </div>
-    <div class="tile" data-bind="click:showBase64">Example showing <b>Base64</b>
+    <div class="tile" data-bind="click:showBase64">
+        Example showing <b>Base64</b>
     </div>
+    <div class="tile" data-bind="click:showGallery">Slide Show <b>Gallery</b></div>
     <div data-bind="with:animateLayout">
         <div data-bind="template:{ name:'layout-animation-demo',data:$data}"></div>
     </div>
     <div data-bind="with:base64">
         <div data-bind="template:{ name:'base64-demo', data: $data }"></div>
+    </div>
+    <div data-bind="with:gallery">
+        <div data-bind="template:{ name:'nivo-demo', data: $data}"></div>
     </div>
 </body>
 </html>
