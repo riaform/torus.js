@@ -1,4 +1,4 @@
-define ["../src/base64.js","knockout"], (Base64,ko) ->
+define ["src/base64.js","knockout"], (Base64,ko) ->
     class Base64DemoViewModel
         constructor: () ->
             @source = ko.observable("FOO")
