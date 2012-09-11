@@ -9,7 +9,13 @@
       "jquery": "jquery-1.8.0",
       "knockout": "knockout-2.1.0",
       "jquery.easing": "jquery.easing.1.3",
-      "source": "/src"
+      "source": "/src",
+      "jquery-ui": "jquery-ui-1.8.23"
+    },
+    shim: {
+      "jquery.easing": ["jquery"],
+      "jquery-ui": ["jquery"],
+      "nivo-slider/jquery.nivo.slider": ["jquery"]
     }
   });
 

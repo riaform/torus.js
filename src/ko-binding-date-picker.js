@@ -1,6 +1,6 @@
 (function() {
 
-  define(["knockout", "jquery", "jquery-ui-1.8.23"], function(ko, $) {
+  define(["knockout", "jquery", "jquery-ui"], function(ko, $) {
     return this.ko.bindingHandlers.datePicker = {
       init: function(element, valueAccessor, allBindingAccessor, viewModel) {
         return $(element).datepicker(valueAccessor());

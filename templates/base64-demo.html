@@ -4,4 +4,21 @@
     <input type="text" data-bind="value: $data.source"/><button data-bind="click: convertToBase64">Convert</button>
     <p>Result</p>
     <input type="text" data-bind="value: $data.target"/><button data-bind="click: convertFromBase64">Convert Back</button>
+    <div>
+        <pre>
+    &lt;input type="text" data-bind="value: $data.source"/&gt;&lt;button data-bind="click: convertToBase64"&gt;Convert&lt;/button&gt;
+        </pre>
+        <pre>
+    define ["source/base64","knockout"], (Base64,ko) ->
+        class Base64DemoViewModel
+            constructor: () ->
+                @source = ko.observable("FOO")
+                @target = ko.observable("")
+                @base64 = new Base64()
+
+            convertToBase64: () =>
+                @target( @base64.encode( @source() ))
+
+        </pre>
+    </div>
 </div>
