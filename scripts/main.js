@@ -22,11 +22,8 @@
   require(["jquery", "knockout", "demo-viewmodel", "source/switch-view", "source/external-ko-template", "jquery.easing"], function($, ko, ViewModel, SwitchView, ExternalTemplateSource) {
     var ets;
     ets = ExternalTemplateSource;
+    ets.urlPrefix = "/torus.js/templates/";
     return $(function() {
-      ets.urlPrefix = "/torus.js/templates/";
-      $.ajaxSetup({
-        cache: false
-      });
       $("#main").text("KO: " + typeof ViewModel);
       return ko.applyBindings(new ViewModel());
     });

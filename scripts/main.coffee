@@ -6,7 +6,7 @@ require.config
         "jquery": "jquery-1.8.0",
         "knockout": "knockout-2.1.0",
         "jquery.easing" : "jquery.easing.1.3",
-        "source" : "/torus.js/src",
+        "source" : "/torus.js/src"
         "jquery-ui" : "jquery-ui-1.8.23"
     shim:
         "jquery.easing": ["jquery"],
@@ -14,10 +14,9 @@ require.config
         "nivo-slider/jquery.nivo.slider" : ["jquery"]
 require ["jquery","knockout", "demo-viewmodel", "source/switch-view", "source/external-ko-template", "jquery.easing"], ($,ko,ViewModel,SwitchView,ExternalTemplateSource) ->
     ets = ExternalTemplateSource;
+    ets.urlPrefix = "/torus.js/templates/"
     $( () ->
         # switch to local template directory (just GH branch)
-        ets.urlPrefix = "/torus.js/templates/"
-        $.ajaxSetup({ cache: false })
         $("#main").text("KO: " + typeof(ViewModel))
         ko.applyBindings(new ViewModel())
         )
