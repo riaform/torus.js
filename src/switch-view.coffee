@@ -11,13 +11,15 @@ define ["knockout"], (ko) ->
             aliases.push key
             # loop through all VMs
             for p,i in @propertyNames
-                observ = @properties[i] 
+                observ = @properties[i]
+                foundView = false
                 # if any of the alias names for this VM is the same as the property name, then enable the VM
                 for alias in aliases
                     if (alias==p) 
                         observ(value)
+                        foundView = true
                         break
-                observ(null)
+                if (!foundView) then observ(null)
 
         # set-up an observable property in an array called @propertyNames.  Also set optional aliases in PropertyAlias
         setupProperty: (name, aliases...) =>

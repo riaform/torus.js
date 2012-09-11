@@ -15,7 +15,7 @@
       }
 
       SwitchView.prototype.reset = function(key, value) {
-        var alias, aliases, i, observ, p, _i, _j, _len, _len1, _ref, _results;
+        var alias, aliases, foundView, i, observ, p, _i, _j, _len, _len1, _ref, _results;
         aliases = this[key + "Alias"];
         aliases.push(key);
         _ref = this.propertyNames;
@@ -23,14 +23,20 @@
         for (i = _i = 0, _len = _ref.length; _i < _len; i = ++_i) {
           p = _ref[i];
           observ = this.properties[i];
+          foundView = false;
           for (_j = 0, _len1 = aliases.length; _j < _len1; _j++) {
             alias = aliases[_j];
             if (alias === p) {
               observ(value);
+              foundView = true;
               break;
             }
           }
-          _results.push(observ(null));
+          if (!foundView) {
+            _results.push(observ(null));
+          } else {
+            _results.push(void 0);
+          }
         }
         return _results;
       };
