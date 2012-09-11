@@ -3,7 +3,7 @@
   define.amd.jQuery = true;
 
   require.config({
-    baseUrl: '/scripts',
+    baseUrl: '../scripts',
     urlArgs: "bust=" + (new Date()).getTime(),
     paths: {
       "jquery": "jquery-1.8.0",
@@ -23,6 +23,10 @@
     var ets;
     ets = ExternalTemplateSource;
     return $(function() {
+      ets.urlPrefix = "../templates/";
+      $.ajaxSetup({
+        cache: false
+      });
       $("#main").text("KO: " + typeof ViewModel);
       return ko.applyBindings(new ViewModel());
     });
