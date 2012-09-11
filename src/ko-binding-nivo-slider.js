@@ -1,6 +1,6 @@
 (function() {
 
-  define(["knockout", "jquery", "jquery.easing", "jquery-ui-1.8.23", "nivo-slider/jquery.nivo.slider"], function(ko, $) {
+  define(["knockout", "jquery", "jquery.easing", "jquery-ui", "nivo-slider/jquery.nivo.slider"], function(ko, $) {
     return ko.bindingHandlers.nivoSlider = {
       init: function(element, valueAccessor, allBindingAccessor, viewModel) {
         if ($(element).find("img[src]").length === 0) {

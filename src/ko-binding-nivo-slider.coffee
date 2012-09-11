@@ -1,4 +1,4 @@
-define ["knockout","jquery","jquery.easing","jquery-ui-1.8.23","nivo-slider/jquery.nivo.slider"], (ko,$) ->
+define ["knockout","jquery","jquery.easing","jquery-ui","nivo-slider/jquery.nivo.slider"], (ko,$) ->
     ko.bindingHandlers.nivoSlider =
         # call the nivoSlider jquery plugin on the parent element.  Pass in the structure from the databind for options 
         init: (element, valueAccessor, allBindingAccessor, viewModel) ->
