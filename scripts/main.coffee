@@ -11,7 +11,8 @@ require.config
     shim:
         "jquery.easing": ["jquery"],
         "source/external-ko-template": ["knockout"],
-        "jquery-ui" : ["jquery"]
+        "jquery-ui" : ["jquery"],
+        "jquery-nivo-slider" : ["jquery"]
 require ["jquery","knockout", "demo-viewmodel", "source/switch-view", "source/external-ko-template", "jquery.easing"], ($,ko,ViewModel,SwitchView,ExternalTemplateSource) ->
     ets = ExternalTemplateSource;
     $( () ->

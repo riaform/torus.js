@@ -15,7 +15,8 @@
     shim: {
       "jquery.easing": ["jquery"],
       "source/external-ko-template": ["knockout"],
-      "jquery-ui": ["jquery"]
+      "jquery-ui": ["jquery"],
+      "jquery-nivo-slider": ["jquery"]
     }
   });
 
