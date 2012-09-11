@@ -1,4 +1,4 @@
-define ["source/multi-select","knockout","jquery.easing"], (MultiSelectViewModel,ko) ->
+define ["source/multi-select","knockout","jquery","jquery.easing"], (MultiSelectViewModel,ko) ->
     class AnimateLayoutDemoViewModel
         constructor: () ->
             @target = ko.observableArray([{ name: 'Two' }])

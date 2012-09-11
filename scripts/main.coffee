@@ -7,6 +7,9 @@ require.config
         "knockout": "knockout-2.1.0",
         "jquery.easing" : "jquery.easing.1.3",
         "source" : "/torus.js/src"
+    shim:
+        "jquery.easing": ["jquery"],
+        "source/external-ko-template": ["kockout"]
 require ["jquery","knockout", "demo-viewmodel", "source/switch-view", "source/external-ko-template", "jquery.easing"], ($,ko,ViewModel,SwitchView,ExternalTemplateSource) ->
     ets = ExternalTemplateSource;
     $( () ->

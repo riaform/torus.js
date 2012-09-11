@@ -1,6 +1,6 @@
 (function() {
 
-  define(["source/multi-select", "knockout", "jquery.easing"], function(MultiSelectViewModel, ko) {
+  define(["source/multi-select", "knockout", "jquery", "jquery.easing"], function(MultiSelectViewModel, ko) {
     var AnimateLayoutDemoViewModel;
     return AnimateLayoutDemoViewModel = (function() {
 

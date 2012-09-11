@@ -10,6 +10,10 @@
       "knockout": "knockout-2.1.0",
       "jquery.easing": "jquery.easing.1.3",
       "source": "/torus.js/src"
+    },
+    shim: {
+      "jquery.easing": ["jquery"],
+      "source/external-ko-template": ["kockout"]
     }
   });
 
