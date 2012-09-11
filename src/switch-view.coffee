@@ -7,11 +7,13 @@ define ["knockout"], (ko) ->
 
         # set all properties to null, other than 'key' and it's aliases
         reset: (key,value) =>
-            propertySet = @[key+"Alias"]
-            propertySet.push key
+            aliases = @[key+"Alias"]
+            aliases.push key
+            # loop through all VMs
             for p,i in @propertyNames
-                observ = @properties[i]
-                if (propertySet.filter( (i) -> (i==p) ).length>0) then observ(value) else observ(null)
+                observ = @properties[i] 
+                # if any of the alias names for this VM is the same as the property name, then enable the VM
+                if (aliases.filter( (alias) -> (alias==p) ).length>0) then observ(value) else observ(null)
 
         # set-up an observable property in an array called @propertyNames.  Also set optional aliases in PropertyAlias
         setupProperty: (name, aliases...) =>
