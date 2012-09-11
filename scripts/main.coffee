@@ -7,7 +7,7 @@ require.config
         "knockout": "knockout-2.1.0",
         "jquery.easing" : "jquery.easing.1.3",
         "source" : "/torus.js/src"
-require ["jquery","knockout", "demo-viewmodel", "source/switch-view", "source/external-ko-template"], ($,ko,ViewModel,SwitchView,ExternalTemplateSource) ->
+require ["jquery","knockout", "demo-viewmodel", "source/switch-view", "source/external-ko-template", "jquery.easing"], ($,ko,ViewModel,SwitchView,ExternalTemplateSource) ->
     ets = ExternalTemplateSource;
     $( () ->
         # switch to local template directory (just GH branch)

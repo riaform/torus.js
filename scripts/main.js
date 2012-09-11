@@ -13,7 +13,7 @@
     }
   });
 
-  require(["jquery", "knockout", "demo-viewmodel", "source/switch-view", "source/external-ko-template"], function($, ko, ViewModel, SwitchView, ExternalTemplateSource) {
+  require(["jquery", "knockout", "demo-viewmodel", "source/switch-view", "source/external-ko-template", "jquery.easing"], function($, ko, ViewModel, SwitchView, ExternalTemplateSource) {
     var ets;
     ets = ExternalTemplateSource;
     return $(function() {
