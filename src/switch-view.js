@@ -15,7 +15,7 @@
       }
 
       SwitchView.prototype.reset = function(key, value) {
-        var aliases, i, observ, p, _i, _len, _ref, _results;
+        var alias, aliases, i, observ, p, _i, _j, _len, _len1, _ref, _results;
         aliases = this[key + "Alias"];
         aliases.push(key);
         _ref = this.propertyNames;
@@ -23,13 +23,14 @@
         for (i = _i = 0, _len = _ref.length; _i < _len; i = ++_i) {
           p = _ref[i];
           observ = this.properties[i];
-          if (aliases.filter(function(alias) {
-            return alias === p;
-          }).length > 0) {
-            _results.push(observ(value));
-          } else {
-            _results.push(observ(null));
+          for (_j = 0, _len1 = aliases.length; _j < _len1; _j++) {
+            alias = aliases[_j];
+            if (alias === p) {
+              observ(value);
+              break;
+            }
           }
+          _results.push(observ(null));
         }
         return _results;
       };
