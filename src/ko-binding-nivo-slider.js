@@ -6,7 +6,6 @@
         if ($(element).find("img[src]").length === 0) {
           return;
         }
-        console.info("Nivo Initlal Options", JSON.stringify(valueAccessor()));
         return $(element).nivoSlider(ko.utils.unwrapObservable(valueAccessor()));
       },
       update: function(element, valueAccessor, allBindingsAccessor, viewModel) {
@@ -16,7 +15,6 @@
         $.each($(element).find("img[src]"), function(i, e) {
           return e.removeAttribute("data-bind");
         });
-        console.info("Nivo Update Options", JSON.stringify(valueAccessor()));
         return $(element).nivoSlider(ko.utils.unwrapObservable(valueAccessor()));
       }
     };
