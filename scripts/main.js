@@ -13,7 +13,7 @@
     },
     shim: {
       "jquery.easing": ["jquery"],
-      "source/external-ko-template": ["kockout"]
+      "source/external-ko-template": ["knockout"]
     }
   });
 
