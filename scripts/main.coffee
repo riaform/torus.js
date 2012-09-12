@@ -15,7 +15,7 @@ require.config
 require ["jquery","knockout", "demo-viewmodel", "source/switch-view", "source/external-ko-template", "jquery.easing"], ($,ko,ViewModel,SwitchView,ExternalTemplateSource) ->
     ets = ExternalTemplateSource
     $( () ->
-        ets.urlPrefix = "./../templates/"
+        ets.urlPrefix = "./templates/"
         # switch to local template directory (just GH branch)
         $.ajaxSetup({ cache: false })
         $("#main").text("KO: " + typeof(ViewModel))

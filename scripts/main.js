@@ -23,7 +23,7 @@
     var ets;
     ets = ExternalTemplateSource;
     return $(function() {
-      ets.urlPrefix = "./../templates/";
+      ets.urlPrefix = "./templates/";
       $.ajaxSetup({
         cache: false
       });
