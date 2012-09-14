@@ -5,6 +5,7 @@
     <link href="css/site.css" rel="stylesheet" />
     <link href="scripts/nivo-slider/themes/default/default.css" rel="stylesheet" />
     <link href="scripts/nivo-slider/nivo-slider.css" rel="stylesheet" />
+    <link href="Content/themes/base/jquery-ui.css" rel="stylesheet" />
     <style type="text/css">
         h2 {
             font-family:Calibri;
@@ -37,6 +38,9 @@
         Example showing <b>Base64</b>
     </div>
     <div class="tile" data-bind="click:showGallery">Slide Show <b>Gallery</b></div>
+    <div class="tile" data-bind="click:showDatePicker">Slide Show <b>Date Picker</b></div>
+
+<!-- Templates -->
     <div data-bind="with:animateLayout">
         <div data-bind="template:{ name:'layout-animation-demo',data:$data}"></div>
     </div>
@@ -46,5 +50,7 @@
     <div data-bind="with:gallery">
         <div data-bind="template:{ name:'nivo-demo', data: $data}"></div>
     </div>
-</body>
+    <div data-bind="with:datePicker">
+        <div data-bind="template:{ name:'date-picker', data: $data}"></div>
+    </div></body>
 </html>
