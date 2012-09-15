@@ -1,7 +1,7 @@
 (function() {
 
-  define(["knockout", "jquery", "load-image", "canvas-to-blob", "jquery-file-upload/jquery.fileupload", "jquery-file-upload/jquery.fileupload-fp"], function(ko, $) {
-    return this.ko.bindingHandlers.imageUpload = {
+  define(["knockout", "jquery", "jquery-file-upload/jquery.fileupload-fp"], function(ko, $) {
+    return ko.bindingHandlers.imageUpload = {
       init: function(element, valueAccessor, allBindingAccessor, viewModel) {
         var url, vm, _ref, _ref1, _ref2, _ref3, _ref4,
           _this = this;

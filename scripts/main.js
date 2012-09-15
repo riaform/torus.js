@@ -5,16 +5,25 @@
   require.config({
     baseUrl: 'scripts',
     urlArgs: "bust=" + (new Date()).getTime(),
+    map: {
+      "jquery-file-upload/jquery.fileupload": {
+        "jquery.ui.widget": "jquery-ui"
+      }
+    },
     paths: {
-      "jquery": "jquery-1.8.0",
+      "jquery": "jquery-1.8.1",
       "knockout": "knockout-2.1.0",
+      "komapping": 'knockout.mapping-latest.debug',
       "jquery.easing": "jquery.easing.1.3",
       "source": "./../src",
-      "jquery-ui": "jquery-ui-1.8.23"
+      "jquery-ui": "jquery-ui-1.8.23",
+      "canvas-to-blob": "canvas-to-blob.min",
+      "load-image": "load-image.min"
     },
     shim: {
       "jquery.easing": ["jquery"],
       "jquery-ui": ["jquery"],
+      "jquery.widget": ["jquery"],
       "nivo-slider/jquery.nivo.slider": ["jquery"]
     }
   });

@@ -1,5 +1,5 @@
-define ["knockout","jquery","load-image","canvas-to-blob","jquery-file-upload/jquery.fileupload","jquery-file-upload/jquery.fileupload-fp"], (ko,$) ->
-    @ko.bindingHandlers.imageUpload = 
+define ["knockout","jquery","jquery-file-upload/jquery.fileupload-fp"], (ko,$) ->
+    ko.bindingHandlers.imageUpload = 
         init: (element, valueAccessor, allBindingAccessor, viewModel) ->
             url = valueAccessor().url
             vm = viewModel

@@ -1,6 +1,6 @@
 # This View Model is simply a switcher between the different demos.  It uses the SwitchView class
 # to hold which view is active.  Each property is an observable defined using setupProperty
-define ["source/switch-view", "demo-animate-layout-vm", "demo-base64-vm", "demo-gallery-vm", "demo-date-picker" ], (SwitchView,AnimateLayoutViewModel, Base64DemoViewModel, GalleryViewModel, DatePickerDemoViewModel) ->
+define ["source/switch-view", "demo-animate-layout-vm", "demo-base64-vm", "demo-gallery-vm", "demo-date-picker", "demo-file-upload" ], (SwitchView,AnimateLayoutViewModel, Base64DemoViewModel, GalleryViewModel, DatePickerDemoViewModel, FileUploadDemoViewModel) ->
     class DemoViewModel extends SwitchView
         constructor: () ->
             super()
@@ -8,6 +8,7 @@ define ["source/switch-view", "demo-animate-layout-vm", "demo-base64-vm", "demo-
             @setupProperty "base64"
             @setupProperty "gallery"
             @setupProperty "datePicker"
+            @setupProperty "fileUpload"
 
         showAnimateLayout: () =>
             @reset "animateLayout", new AnimateLayoutViewModel()
@@ -20,3 +21,6 @@ define ["source/switch-view", "demo-animate-layout-vm", "demo-base64-vm", "demo-
 
         showDatePicker: () =>
             @reset "datePicker", new DatePickerDemoViewModel()
+
+        showFileUpload: () =>
+            @reset "fileUpload", new FileUploadDemoViewModel()
