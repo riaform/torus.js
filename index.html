@@ -38,7 +38,8 @@
         Example showing <b>Base64</b>
     </div>
     <div class="tile" data-bind="click:showGallery">Slide Show <b>Gallery</b></div>
-    <div class="tile" data-bind="click:showDatePicker">Slide Show <b>Date Picker</b></div>
+    <div class="tile" data-bind="click:showDatePicker">Demo of databound <b>Date Picker</b></div>
+    <div class="tile" data-bind="click:showFileUpload">Demo of databound <b>File Upload</b> with client side resize.</div>
 
 <!-- Templates -->
     <div data-bind="with:animateLayout">
@@ -52,5 +53,8 @@
     </div>
     <div data-bind="with:datePicker">
         <div data-bind="template:{ name:'date-picker', data: $data}"></div>
+    </div></body>
+    <div data-bind="with:fileUpload">
+        <div data-bind="template:{ name:'file-upload', data: $data}"></div>
     </div></body>
 </html>
