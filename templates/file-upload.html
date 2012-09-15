@@ -1,0 +1,6 @@
+﻿<!-- template to use to visualize the item - just use a span -->
+<div class="demo">
+    <p>Upload</p>
+    <img style="width:200px; height:200px" data-bind="attr: { src: imageUrl }" />
+    <input data-bind="imageUpload:{url:'contacts/imageUrl', maxWidth:200, maxHeight:200}" type="file" name="files" data-url="contacts/imageUrl">
+</div>
