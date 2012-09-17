@@ -4,23 +4,8 @@ define ["source/switch-view", "demo-animate-layout-vm", "demo-base64-vm", "demo-
     class DemoViewModel extends SwitchView
         constructor: () ->
             super()
-            @setupProperty "animateLayout"
-            @setupProperty "base64"
-            @setupProperty "gallery"
-            @setupProperty "datePicker"
-            @setupProperty "fileUpload"
-
-        showAnimateLayout: () =>
-            @reset "animateLayout", new AnimateLayoutViewModel()
-
-        showBase64: () =>
-            @reset "base64",new Base64DemoViewModel()
-
-        showGallery: () =>
-            @reset "gallery", new GalleryViewModel()
-
-        showDatePicker: () =>
-            @reset "datePicker", new DatePickerDemoViewModel()
-
-        showFileUpload: () =>
-            @reset "fileUpload", new FileUploadDemoViewModel()
+            @setupProperty "animateLayout", { activate: (data) => new AnimateLayoutViewModel() } 
+            @setupProperty "base64", { activate: (data) => new Base64DemoViewModel() }
+            @setupProperty "gallery", { activate: (data) => new GalleryViewModel() }
+            @setupProperty "datePicker", { activate: (data) => new DatePickerDemoViewModel() }
+            @setupProperty "fileUpload", { activate: (data) => new FileUploadDemoViewModel() }

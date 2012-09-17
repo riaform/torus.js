@@ -22,8 +22,11 @@ define ["knockout"], (ko) ->
                 if (!foundView) then observ(null)
 
         # set-up an observable property in an array called @propertyNames.  Also set optional aliases in PropertyAlias
-        setupProperty: (name, aliases...) =>
+        setupProperty: (name, options) =>
+            aliases = options.alises ? []
             @[name] = ko.observable(null)
             @properties.push( @[name] )
             @propertyNames.push( name )
             @[name+"Alias"] = aliases ? []
+            @["show" + name[0].toUpperCase() + name[1..]] = () =>
+                @reset name,(options.activate)()

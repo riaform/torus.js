@@ -1,6 +1,5 @@
 (function() {
-  var __bind = function(fn, me){ return function(){ return fn.apply(me, arguments); }; },
-    __slice = [].slice;
+  var __bind = function(fn, me){ return function(){ return fn.apply(me, arguments); }; };
 
   define(["knockout"], function(ko) {
     var SwitchView;
@@ -41,13 +40,17 @@
         return _results;
       };
 
-      SwitchView.prototype.setupProperty = function() {
-        var aliases, name;
-        name = arguments[0], aliases = 2 <= arguments.length ? __slice.call(arguments, 1) : [];
+      SwitchView.prototype.setupProperty = function(name, options) {
+        var aliases, _ref,
+          _this = this;
+        aliases = (_ref = options.alises) != null ? _ref : [];
         this[name] = ko.observable(null);
         this.properties.push(this[name]);
         this.propertyNames.push(name);
-        return this[name + "Alias"] = aliases != null ? aliases : [];
+        this[name + "Alias"] = aliases != null ? aliases : [];
+        return this["show" + name[0].toUpperCase() + name.slice(1)] = function() {
+          return _this.reset(name, options.activate());
+        };
       };
 
       return SwitchView;
