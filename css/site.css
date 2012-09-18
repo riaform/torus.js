@@ -32,11 +32,11 @@
 }
 
 .tile {
-    width:150px;
-    height:100px;
+    width:140px;
+    height:80px;
     background-color:#ffd800;
     text-align:center;
-    display:inline-block;
+    display:block;
     margin:10px;
     cursor:pointer;
     user-select:none;
@@ -48,8 +48,5 @@
 
 .demo {
     display:block;
-    border:double 5px black;
-    padding:5px;
-    min-height:300px;
-    min-width:300px;
+    padding:3px;
 }

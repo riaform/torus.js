@@ -139,6 +139,14 @@
   <file name="demo-file-upload.coffee">
     <setting name="Compile">True</setting>
     <setting name="Minify">False</setting>
+    <setting name="OutputFolder"></setting>
+    <setting name="Bare">False</setting>
+    <setting name="Iced">False</setting>
+    <setting name="IncludedFiles"></setting>
+  </file>
+  <file name="ko-binding-layout.coffee">
+    <setting name="Compile">True</setting>
+    <setting name="Minify">False</setting>
     <setting name="OutputFolder" />
     <setting name="Bare">False</setting>
     <setting name="Iced">False</setting>

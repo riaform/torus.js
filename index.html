@@ -2,16 +2,17 @@
 <html en>
 <head>
     <title>torus.js samples</title>
-    <link href="css/site.css" rel="stylesheet" />
     <link href="scripts/nivo-slider/themes/default/default.css" rel="stylesheet" />
     <link href="scripts/nivo-slider/nivo-slider.css" rel="stylesheet" />
     <link href="Content/themes/base/jquery-ui.css" rel="stylesheet" />
+    <link href="Content/layout-default-latest.css" rel="stylesheet" />
+    <link href="css/site.css" rel="stylesheet" />
     <style type="text/css">
         h2 {
-            font-family:Calibri;
-            font-weight:800;
-            font-size:28pt;
-            line-height:0.5;
+            font-family: Calibri;
+            font-weight: 800;
+            font-size: 28pt;
+            line-height: 0.5;
         }
 
         .nivoSlider img {
@@ -20,8 +21,9 @@
             left: 0px;
             display: none;
             height: 300px !important;
-            width:300px !important;
+            width: 300px !important;
         }
+
         .nivoSlider {
             height: 300px !important;
             width: 300px !important;
@@ -29,28 +31,34 @@
     </style>
     <script data-main="./scripts/main" src="./scripts/require.js"></script>
 </head>
-<body>
-    <h2>torus.js</h2>
-    <div class="tile" data-bind="click:showAnimateLayout">Example showing <b>Knockout.js</b> based template layout 2 layout animation</div>
-    <div class="tile" data-bind="click:showBase64">Example showing <b>Base64</b></div>
-    <div class="tile" data-bind="click:showGallery">Slide Show <b>Gallery</b></div>
-    <div class="tile" data-bind="click:showDatePicker">Demo of databound <b>Date Picker</b></div>
-    <div class="tile" data-bind="click:showFileUpload">Demo of databound <b>File Upload</b> with client side resize.</div>
-
-<!-- Templates -->
-    <div data-bind="with:animateLayout">
-        <div data-bind="template:{ name:'layout-animation-demo',data:$data}"></div>
+<body data-bind="jqueryLayout: { defaults__spacing_open: 0, defaults__spacing_closed: 0, defaults__resizable:false, defaults__closable:false,north__size: 80, west__size: 200 }">
+    <div class="ui-layout-north">
+        <h2>torus.js</h2>
     </div>
-    <div data-bind="with:base64">
-        <div data-bind="template:{ name:'base64-demo', data: $data }"></div>
+    <div class="ui-layout-west">
+        <div class="tile" data-bind="click:showAnimateLayout">Example showing <b>Knockout.js</b> based template layout 2 layout animation</div>
+        <div class="tile" data-bind="click:showBase64">Example showing <b>Base64</b></div>
+        <div class="tile" data-bind="click:showGallery">Slide Show <b>Gallery</b></div>
+        <div class="tile" data-bind="click:showDatePicker">Demo of databound <b>Date Picker</b></div>
+        <div class="tile" data-bind="click:showFileUpload">Demo of databound <b>File Upload</b> with client side resize.</div>
     </div>
-    <div data-bind="with:gallery">
-        <div data-bind="template:{ name:'nivo-demo', data: $data}"></div>
+    <div class="ui-layout-center">
+        <!-- Templates -->
+        <div data-bind="with:animateLayout">
+            <div data-bind="template:{ name:'layout-animation-demo',data:$data}"></div>
+        </div>
+        <div data-bind="with:base64">
+            <div data-bind="template:{ name:'base64-demo', data: $data }"></div>
+        </div>
+        <div data-bind="with:gallery">
+            <div data-bind="template:{ name:'nivo-demo', data: $data}"></div>
+        </div>
+        <div data-bind="with:datePicker">
+            <div data-bind="template:{ name:'date-picker', data: $data}"></div>
+        </div>
+        <div data-bind="with:fileUpload">
+            <div data-bind="template:{ name:'file-upload', data: $data}"></div>
+        </div>
     </div>
-    <div data-bind="with:datePicker">
-        <div data-bind="template:{ name:'date-picker', data: $data}"></div>
-    </div></body>
-    <div data-bind="with:fileUpload">
-        <div data-bind="template:{ name:'file-upload', data: $data}"></div>
-    </div></body>
+</body>
 </html>
