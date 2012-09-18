@@ -28,11 +28,13 @@ define ["knockout"], (ko) ->
 
         # set-up an observable property in an array called @propertyNames.  Also set optional aliases in PropertyAlias
         setupProperty: (name, options) =>
-            aliases = options.alises ? []
+            options = options ? {}
+            aliases = options.aliases ? []
             @[name] = ko.observable(null)
             @properties.push( @[name] )
             @propertyNames.push( name )
-            @[name+"Alias"] = aliases ? []
-            @["show" + name[0].toUpperCase() + name[1..]] = () =>
-                @reset name,(options.activate)()
+            @[name+"Alias"] = aliases 
+            returnFn = options.activate ? ( (data) -> data )
+            @["show" + name[0].toUpperCase() + name[1..]] = (data) =>
+                @reset name,returnFn.call(data)
             @[name+"Ignore"] = options.ignore ? []
