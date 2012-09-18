@@ -27,6 +27,5 @@ require ["jquery","knockout", "demo-viewmodel", "source/switch-view", "source/ex
         ets.urlPrefix = "./templates/"
         # switch to local template directory (just GH branch)
         $.ajaxSetup({ cache: false })
-        $("#main").text("KO: " + typeof(ViewModel))
         ko.applyBindings(new ViewModel())
         )

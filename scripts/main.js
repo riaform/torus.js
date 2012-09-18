@@ -38,7 +38,6 @@
       $.ajaxSetup({
         cache: false
       });
-      $("#main").text("KO: " + typeof ViewModel);
       return ko.applyBindings(new ViewModel());
     });
   });

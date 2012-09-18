@@ -14,8 +14,9 @@
       }
 
       SwitchView.prototype.reset = function(key, value) {
-        var alias, aliases, foundView, i, observ, p, _i, _j, _len, _len1, _ref, _results;
+        var alias, aliases, foundView, i, ignore, ignores, observ, p, _i, _j, _k, _len, _len1, _len2, _ref, _results;
         aliases = this[key + "Alias"];
+        ignores = this[key + "Ignore"];
         aliases.push(key);
         _ref = this.propertyNames;
         _results = [];
@@ -31,6 +32,13 @@
               break;
             }
           }
+          for (_k = 0, _len2 = ignores.length; _k < _len2; _k++) {
+            ignore = ignores[_k];
+            if (ignore === p) {
+              foundView = true;
+              break;
+            }
+          }
           if (!foundView) {
             _results.push(observ(null));
           } else {
@@ -41,16 +49,17 @@
       };
 
       SwitchView.prototype.setupProperty = function(name, options) {
-        var aliases, _ref,
+        var aliases, _ref, _ref1,
           _this = this;
         aliases = (_ref = options.alises) != null ? _ref : [];
         this[name] = ko.observable(null);
         this.properties.push(this[name]);
         this.propertyNames.push(name);
         this[name + "Alias"] = aliases != null ? aliases : [];
-        return this["show" + name[0].toUpperCase() + name.slice(1)] = function() {
+        this["show" + name[0].toUpperCase() + name.slice(1)] = function() {
           return _this.reset(name, options.activate());
         };
+        return this[name + "Ignore"] = (_ref1 = options.ignore) != null ? _ref1 : [];
       };
 
       return SwitchView;

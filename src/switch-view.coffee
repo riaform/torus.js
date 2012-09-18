@@ -8,6 +8,7 @@ define ["knockout"], (ko) ->
         # set all properties to null, other than 'key' and it's aliases
         reset: (key,value) =>
             aliases = @[key+"Alias"]
+            ignores = @[key+"Ignore"]
             aliases.push key
             # loop through all VMs
             for p,i in @propertyNames
@@ -17,6 +18,10 @@ define ["knockout"], (ko) ->
                 for alias in aliases
                     if (alias==p) 
                         observ(value)
+                        foundView = true
+                        break
+                for ignore in ignores
+                    if (ignore==p)
                         foundView = true
                         break
                 if (!foundView) then observ(null)
@@ -30,3 +35,4 @@ define ["knockout"], (ko) ->
             @[name+"Alias"] = aliases ? []
             @["show" + name[0].toUpperCase() + name[1..]] = () =>
                 @reset name,(options.activate)()
+            @[name+"Ignore"] = options.ignore ? []
