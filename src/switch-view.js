@@ -61,7 +61,7 @@
           return data;
         });
         this["show" + name[0].toUpperCase() + name.slice(1)] = function(data) {
-          return _this.reset(name, returnFn.call(data));
+          return _this.reset(name, returnFn(data));
         };
         return this[name + "Ignore"] = (_ref2 = options.ignore) != null ? _ref2 : [];
       };

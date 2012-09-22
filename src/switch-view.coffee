@@ -36,5 +36,5 @@ define ["knockout"], (ko) ->
             @[name+"Alias"] = aliases 
             returnFn = options.activate ? ( (data) -> data )
             @["show" + name[0].toUpperCase() + name[1..]] = (data) =>
-                @reset name,returnFn.call(data)
+                @reset name,returnFn(data)
             @[name+"Ignore"] = options.ignore ? []
