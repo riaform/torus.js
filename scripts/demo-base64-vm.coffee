@@ -1,13 +1,13 @@
-define ["source/base64","knockout"], (Base64,ko) ->
+define ["source/base64","knockout","source/logger"], (Base64,ko,logger) ->
+    Base64 = Base64.Base64 
     class Base64DemoViewModel
         constructor: () ->
             @source = ko.observable("FOO")
             @target = ko.observable("")
-            @base64 = new Base64()
 
         convertToBase64: () =>
-            @target( @base64.encode( @source() ))
+            @target( Base64.encode( @source() ))
 
         convertFromBase64: () =>
-            @source( @base64.decode( @target() ))
+            @source( Base64.decode( @target() ))
         
