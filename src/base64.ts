@@ -42,6 +42,7 @@ export module Base64 {
         return output;
     }
 
+    // perform UTF8 post processing
     function utf8Encode(input: string): string {
         input = input.replace(/\r\n/g, "\n");
         var utftext = "";
@@ -62,6 +63,7 @@ export module Base64 {
         return utftext;
     }
 
+    // perform UTF8 pre-processings
     function utf8Decode(utftext: string): string {
         var ret = "";
         var i = 0;
