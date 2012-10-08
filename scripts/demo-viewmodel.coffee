@@ -9,3 +9,6 @@ define ["source/switch-view", "demo-animate-layout-vm", "demo-base64-vm", "demo-
             @setupProperty "gallery", { activate: (data) => new GalleryViewModel() }
             @setupProperty "datePicker", { activate: (data) => new DatePickerDemoViewModel() }
             @setupProperty "fileUpload", { activate: (data) => new FileUploadDemoViewModel() }
+
+        showSouth: () =>
+            @layout.toggle("south")

@@ -4,11 +4,13 @@ define ["knockout"], (ko) ->
         constructor: () ->
             @properties = []
             @propertyNames = []
+            @view = ko.observable("")
 
         # set all properties to null, other than 'key' and it's aliases
         reset: (key,value) =>
             aliases = @[key+"Alias"]
             ignores = @[key+"Ignore"]
+            @view(key)
             aliases.push key
             # loop through all VMs
             for p,i in @propertyNames

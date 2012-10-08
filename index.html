@@ -31,7 +31,7 @@
     </style>
     <script data-main="./scripts/main" src="./scripts/require.js"></script>
 </head>
-<body data-bind="jqueryLayout: { defaults__spacing_open: 0, defaults__spacing_closed: 0, defaults__resizable:false, defaults__closable:false,north__size: 80, west__size: 200 }">
+<body data-bind="jqueryLayout: { spacing_open: 0, spacing_closed: 0, resizable:true, closable:true, north__size: 80, west__size: 190, east__size: 500, south__size: 60, south__initClosed:true}" >
     <div class="ui-layout-north">
         <h2>torus.js</h2>
     </div>
@@ -41,6 +41,7 @@
         <div class="tile" data-bind="click:showGallery">Slide Show <b>Gallery</b></div>
         <div class="tile" data-bind="click:showDatePicker">Demo of databound <b>Date Picker</b></div>
         <div class="tile" data-bind="click:showFileUpload">Demo of databound <b>File Upload</b> with client side resize.</div>
+        <div class="tile" data-bind="click:showSouth">Show Popup Panel.</div>
     </div>
     <div class="ui-layout-center">
         <!-- Templates -->
@@ -59,6 +60,10 @@
         <div data-bind="with:fileUpload">
             <div data-bind="template:{ name:'file-upload', data: $data}"></div>
         </div>
+    </div>
+    <div class="ui-layout-south">
+           <p>This is the south pane</p>
+
     </div>
 </body>
 </html>

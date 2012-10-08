@@ -11,12 +11,14 @@
         this.reset = __bind(this.reset, this);
         this.properties = [];
         this.propertyNames = [];
+        this.view = ko.observable("");
       }
 
       SwitchView.prototype.reset = function(key, value) {
         var alias, aliases, foundView, i, ignore, ignores, observ, p, _i, _j, _k, _len, _len1, _len2, _ref, _results;
         aliases = this[key + "Alias"];
         ignores = this[key + "Ignore"];
+        this.view(key);
         aliases.push(key);
         _ref = this.propertyNames;
         _results = [];
