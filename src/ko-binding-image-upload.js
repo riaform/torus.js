@@ -3,13 +3,16 @@
   define(["knockout", "jquery", "jquery-file-upload/jquery.fileupload-fp"], function(ko, $) {
     return ko.bindingHandlers.imageUpload = {
       init: function(element, valueAccessor, allBindingAccessor, viewModel) {
-        var cb, url, vm, _ref, _ref1, _ref2, _ref3, _ref4,
+        var cb, headers, url, vm, _ref, _ref1, _ref2, _ref3, _ref4,
           _this = this;
         url = valueAccessor().url;
         vm = viewModel;
         cb = valueAccessor().callback;
+        headers = valueAccessor().headers;
         return $(element).fileupload({
           dataType: 'json',
+          url: url,
+          headers: headers,
           process: [
             {
               action: 'load',

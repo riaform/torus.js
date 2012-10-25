@@ -4,8 +4,11 @@ define ["knockout","jquery","jquery-file-upload/jquery.fileupload-fp"], (ko,$) -
             url = valueAccessor().url
             vm = viewModel
             cb = valueAccessor().callback
+            headers = valueAccessor().headers
             $(element).fileupload
                 dataType: 'json',
+                url: url,
+                headers: headers,
                 process: [
                     action: 'load',
                     fileTypes: /^image\/(gif|jpeg|png)$/,
