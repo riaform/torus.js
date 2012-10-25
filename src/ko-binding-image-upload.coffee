@@ -3,6 +3,7 @@ define ["knockout","jquery","jquery-file-upload/jquery.fileupload-fp"], (ko,$) -
         init: (element, valueAccessor, allBindingAccessor, viewModel) ->
             url = valueAccessor().url
             vm = viewModel
+            cb = valueAccessor().callback
             $(element).fileupload
                 dataType: 'json',
                 process: [
@@ -20,7 +21,7 @@ define ["knockout","jquery","jquery-file-upload/jquery.fileupload-fp"], (ko,$) -
                 ],
                 done: (e, data) =>
                     $.each data.result, (index, file) =>
-                        vm.ImageUrl( file.url )
+                        cb( file.url )
                         $('.progress .bar').css( 'width', '0px').text("100%")
                 progressall: (e, data) ->
                     progress = parseInt(data.loaded / data.total * 100, 10)

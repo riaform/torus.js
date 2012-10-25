@@ -3,10 +3,11 @@
   define(["knockout", "jquery", "jquery-file-upload/jquery.fileupload-fp"], function(ko, $) {
     return ko.bindingHandlers.imageUpload = {
       init: function(element, valueAccessor, allBindingAccessor, viewModel) {
-        var url, vm, _ref, _ref1, _ref2, _ref3, _ref4,
+        var cb, url, vm, _ref, _ref1, _ref2, _ref3, _ref4,
           _this = this;
         url = valueAccessor().url;
         vm = viewModel;
+        cb = valueAccessor().callback;
         return $(element).fileupload({
           dataType: 'json',
           process: [
@@ -26,7 +27,7 @@
           ],
           done: function(e, data) {
             return $.each(data.result, function(index, file) {
-              vm.ImageUrl(file.url);
+              cb(file.url);
               return $('.progress .bar').css('width', '0px').text("100%");
             });
           },
