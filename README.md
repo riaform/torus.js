@@ -1,5 +1,10 @@
-# Torus JS
-Private JavaScript (and CoffeeScript) libraries used for various applications. 
+# torus.js
+
+Javascript library for various GUI components, used to extend knockout.js.
+
+
+
+
 
 * * *
 Written by Joe Wood and John Wood
